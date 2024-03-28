@@ -3,88 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azure AD B2C Login Page</title>
+    <title>Image and Login Page</title>
     <style>
-      /* Body styles */
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        /* font-family: Arial, sans-serif; */
         margin: 0;
         padding: 0;
-      }
-
-      /* Container styles */
-      .container {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Heading styles */
-      h1 {
-        text-align: center;
-        color: #333;
-        margin-bottom: 20px;
-      }
-
-      /* Form styles */
-      form {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: row; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* min-height: 100vh; */
       }
-
-      label {
+      .image-container {
+        width: 50%;
+        flex: 1;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        background-color: #f0f0f0;
+        height: 100vh;
+      }
+      .image {
+        flex: 1;
+      }
+      .login-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        background-color: #ffffff;
+      }
+      .login-form {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .login-form input[type="text"],
+      .login-form input[type="password"] {
+        width: 100%;
         margin-bottom: 10px;
-        color: #555;
-      }
-
-      input[type="text"],
-      input[type="password"] {
-        padding: 10px;
-        margin-bottom: 15px;
+        padding: 8px;
         border: 1px solid #ccc;
         border-radius: 3px;
       }
-
-      button[type="submit"] {
+      .login-form button {
+        width: 100%;
         padding: 10px;
         background-color: #007bff;
-        color: #fff;
+        color: #ffffff;
         border: none;
         border-radius: 3px;
         cursor: pointer;
       }
-
-      button[type="submit"]:hover {
-        background-color: #0056b3;
-      }
-
-      /* Link styles */
-      a {
-        color: #007bff;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Welcome to Azure AD B2C</h1>
-      <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" />
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" />
-        <button type="submit">Login</button>
-      </form>
+    <div class="image-container">
+      <img
+        src="https://readcommonground.com/wp-content/uploads/2018/02/iStock-846388970-639x426.jpg"
+        alt="Placeholder Image"
+        class="image"
+      />
+    </div>
+    <div class="login-container">
+      <h2>Get Started</h2>
       <div id="api" role="main"></div>
-      <p>Don't have an account? <a href="#">Sign up</a></p>
+      <!-- <form class="login-form" action="#" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Login</button>
+      </form> -->
     </div>
   </body>
 </html>
